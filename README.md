@@ -15,5 +15,5 @@ To install run
 
 ---
 
-For more infor see the [autOlat protocol
+For more info see the [autOlat protocol
 documentation](http://autolat.imn.htwk-leipzig.de/docs/protocol.pdf).
