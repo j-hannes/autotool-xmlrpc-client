@@ -1,0 +1,66 @@
+TaskName     >>> getTaskDesription >>> TaskConfig
+                                       TaskConfigDocumentation
+                                       ScoringOrder
+
+TaskName
+TaskConfig   >>> verifyTaskConfig  >>> ParseErrorDescription
+                                   ||| Signature
+
+
+Signature    >>> getTaskInstance   >>> Signature
+                                       TaskDescription
+                                       TaskDocumentation
+                                       Solution
+
+Signature
+Solution     >>> gradeTaskSolution >>> SolveErrorDescription
+                                   ||| Score
+                                       SolveDocumentation
+                                       
+
+1) select a task name
+
+2) get the example configuration, some documentation for it and the scoring
+   order
+
+3) alter the configuration (*)
+
+4) verify the new configuration (*)
+
+5) enter a name for the configuration
+
+
+    >>> getTaskDescription >>>
+
+Task              == preset on the autotool server
+                       - cannot be changed, just loaded
+                       - kind of a template to create specific tasks
+                       - comes with
+                           * example config
+                           * documentation for config types
+                           * scoring order
+
+    >>> verifyTaskConfig >>>
+
+TaskConfiguration == adjusted configuration for a task
+                       - can be assigned to courses
+                       - stored locally with
+                           * configuration name
+                           * signature (includes task name + config + hash)
+                           * scoring order
+
+    >>> getTaskInstance >>>
+
+TaskInstance      == individualised task configuration
+                       - contains / stored with
+                           * task description
+                           * example solution
+                           * documentation for solution types
+                           * signature (see above)
+
+    >>> gradeTaskSolution >>>
+
+Solution          == solution for a task instance
+                        - contains
+                           * score
+                           * some kind of documentation? (find out)
