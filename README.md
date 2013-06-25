@@ -7,7 +7,7 @@ To install run
 
 ---
 
-* Import Autotool.XmlRpc.Interface.Direct to use.
+* Import Autotool.XmlRpc to use.
 
 * Check out Autotool.XmlRpc.Interface.CommandLine for testing.
 
